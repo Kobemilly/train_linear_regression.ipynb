@@ -1,0 +1,17 @@
+# linear_regression_sklearn/docker-compose.yml
+
+services:
+  sklearn-linear-regression: # 服務名稱
+    build: .
+    container_name: sklearn_linear_regression_container # 獨一無二的容器名
+    # 不需要 GPU
+    volumes:
+      - .:/app # 掛載專案目錄
+    ports:
+      # Jupyter Lab: 容器 8888 -> 主機 8890 (避免衝突)
+      - "8890:8888"
+      # Gradio: 容器 7861 -> 主機 7861
+      - "7861:7861"
+    working_dir: /app
+    stdin_open: true
+    tty: true

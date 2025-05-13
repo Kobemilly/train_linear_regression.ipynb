@@ -1,0 +1,18 @@
+services:
+  sklearn-linear-regression:
+    build: .
+    container_name: sklearn_linear_regression_container
+    volumes:
+      - .:/app
+    ports:
+      - target: 8888       # 容器 Jupyter
+        published: "8890"  # 主機
+        protocol: tcp
+        mode: ingress
+      - target: 7861       # 容器 Gradio
+        published: "7861"  # 主機
+        protocol: tcp
+        mode: ingress
+    working_dir: /app
+    stdin_open: true
+    tty: true
