@@ -20,7 +20,6 @@
     ├── train_linear_regression1.ipynb # 訓練筆記本的替代版本
     ├── Untitled.ipynb          # 未命名筆記本
     └── .ipynb_checkpoints/     # Jupyter自動生成的檢查點備份
-
 ## 主要功能模組
 
 ### 1. 模型訓練 (`notebooks/train_linear_regression.ipynb`)
